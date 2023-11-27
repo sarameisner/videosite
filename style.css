@@ -4,10 +4,28 @@
   box-sizing: border-box;
 }
 
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: #56512e;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
 }
 
 header,
@@ -19,16 +37,19 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 0rem 1.5rem;
-
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
   font-family: "Bungee";
   text-decoration: none;
+  color: red;
 }
 
 nav a {
-  list-style: none;
   text-decoration: none;
   color: red;
+}
+
+nav a:hover {
+  filter: contrast(3);
 }
 
 main {
@@ -44,6 +65,104 @@ main {
   height: 100%; /* Fyld hele skærmens højde */
   object-fit: cover;
 }
+
 li {
   list-style: none;
+}
+
+.aske_arbejder {
+  width: 100%;
+  height: 100%;
+}
+
+.studiet {
+  width: 100%;
+  height: 100%;
+}
+
+.tekstindhold1 {
+  padding: 40px 34px;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  z-index: 1;
+  font-size: large;
+  background-image: url(redigeredebilleder/aske_arbejder.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 106.68/142.24;
+  font-size: 10px;
+  position: absolute;
+}
+
+.tekstindhold2 p {
+  position: absolute;
+  top: 88%;
+  left: 3%;
+  top: 0;
+  max-width: 50ch;
+  font-size: medium;
+}
+
+.tekstindhold2 {
+  background-image: url(redigeredebilleder/studiet.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 106.68/142.24;
+}
+
+.tekstmedbillede {
+  position: relative;
+  display: inline-block;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Mobile-stil */
+@media only screen and (max-width: 600px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  header a {
+    display: none;
+  }
+
+  nav ul li {
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+  header {
+    padding: 0rem 1rem;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+  nav {
+    display: none; /* Skjul navigationen på mindre skærme (vises via burger-menu) */
+  }
+
+  .tekstindhold1 p {
+    font-size: small; /* Juster tekststørrelsen for bedre læsbarhed */
+  }
+
+  /* Tilpasning af billeder eller baggrundsbilleder */
+  .tekstindhold1,
+  .tekstindhold2 {
+    background-size: contain; /* Juster baggrundsbilledets størrelse */
+    background-position: center;
+  }
 }

@@ -1,5 +1,18 @@
-.grid_1_1_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+@media (min-width: 800px) {
+  .grid_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .videoerne {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
 }
