@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header,
+footer {
+  height: 50px;
+  background-color: rgb(251, 251, 251);
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1.5rem;
+
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Bungee";
+  text-decoration: none;
+}
+
+nav a {
+  list-style: none;
+  text-decoration: none;
+  color: red;
+}
+
+main {
+  width: 100%;
+  max-width: 100%; /* Ændret til 100% eller ønsket maksimal bredde */
+  margin: 0 auto; /* Centrer indholdet */
+  padding: 0;
+  font-family: "Bungee";
+}
+
+.forsidebillede {
+  width: 100%; /* Ændringen: Fyld hele skærmens bredde */
+  height: 100%; /* Fyld hele skærmens højde */
+  object-fit: cover;
+}
+li {
+  list-style: none;
+}
