@@ -1,8 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const burgerMenu = document.querySelector(".burger-menu");
-  const navList = document.querySelector("nav ul");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-  burgerMenu.addEventListener("click", function () {
-    navList.classList.toggle("active");
+  burgerMenu.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show-menu");
+  });
+
+  // Skjul menuen ved klik uden for burger-menuen (valgfrit)
+  window.addEventListener("click", (event) => {
+    if (!burgerMenu.contains(event.target)) {
+      mobileMenu.classList.remove("show-menu");
+    }
   });
 });
